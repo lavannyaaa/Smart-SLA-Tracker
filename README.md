@@ -1,18 +1,24 @@
-# Salesforce DX Project: Next Steps
+# Smart SLA Tracker — Intelligent Customer Complaint & Escalation Management
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## Project Overview
 
-## How Do You Plan to Deploy Your Changes?
+Smart SLA Tracker is a Salesforce-based solution that automates the management of customer complaints and adherence to Service Level Agreements (SLAs). It replaces manual tracking methods that often cause delays, missed escalations, and customer dissatisfaction.
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Problem Statement
 
-## Configure Your Salesforce DX Project
+Businesses struggle to manage customer complaints and meet SLAs using manual methods. This leads to delays, missed escalations, and reduced customer trust. A Salesforce-based automated solution is needed for SLA monitoring, complaint handling, and escalations to improve service efficiency and customer satisfaction.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Key Features
 
-## Read All About It
+* *Automated Case Management:* Tracks complaints as Case records.
+* *SLA Monitoring:* Countdown timers with automated alerts before breaches.
+* *Intelligent Escalation:* Escalates unresolved cases to higher tiers using SLA rules.
+* *Custom Data Model:* Custom objects for SLA rules and products linked to Cases.
+* *Role-Based UI:* Record Types and Layouts for agents and managers.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## Data Model
+
+* *Case (standard):* Main complaint record with SLA fields.
+* *SLA\Rule\\_c (custom):* Defines SLA duration and escalation rules.
+* *Product\_\_c (custom):* Product details linked to Case.
+* *Escalation\Log\\_c (custom):* Tracks escalation history.
